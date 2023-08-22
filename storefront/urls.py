@@ -16,7 +16,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-import debug_toolbar
 
 # this is the main url handler
 # we have added the path for 'playground/' - which will forward any request starting with playground/ to playground.urls file
@@ -24,5 +23,4 @@ import debug_toolbar
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('playground/', include('playground.urls')),
-    path("__debug__/", include(debug_toolbar.urls)),
 ]
